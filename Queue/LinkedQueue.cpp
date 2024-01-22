@@ -65,9 +65,10 @@ int LQ_IsEmpty(LinkedQueue* Queue)
 }
 
 // Destory Node
-void LQ_DestroyNode(Node* Node) 
+void LQ_DestroyNode(Node* _Node) 
 {
-	free(Node);
+	free(_Node->Data);
+	free(_Node);
 }
 
 // Destroy Queue
